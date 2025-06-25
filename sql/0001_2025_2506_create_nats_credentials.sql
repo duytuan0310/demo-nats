@@ -1,0 +1,7 @@
+CREATE TABLE nats_credential (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    seed TEXT NOT NULL,
+    public_key TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
