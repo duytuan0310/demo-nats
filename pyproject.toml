@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.115.13",
-    "nats-py>=2.10.0",
+    "nats-py[nkeys]>=2.10.0",
+    "nkeys>=0.2.1",
     "sqlmodel>=0.0.24",
     "uvicorn>=0.34.3",
 ]
