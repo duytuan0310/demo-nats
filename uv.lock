@@ -75,6 +75,7 @@ dependencies = [
     { name = "fastapi" },
     { name = "nats-py", extra = ["nkeys"] },
     { name = "nkeys" },
+    { name = "pynacl" },
     { name = "sqlmodel" },
     { name = "uvicorn" },
 ]
@@ -84,6 +85,7 @@ requires-dist = [
     { name = "fastapi", specifier = ">=0.115.13" },
     { name = "nats-py", extras = ["nkeys"], specifier = ">=2.10.0" },
     { name = "nkeys", specifier = ">=0.2.1" },
+    { name = "pynacl", specifier = ">=1.5.0" },
     { name = "sqlmodel", specifier = ">=0.0.24" },
     { name = "uvicorn", specifier = ">=0.34.3" },
 ]

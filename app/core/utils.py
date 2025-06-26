@@ -1,4 +1,5 @@
 import nkeys
+from nacl.signing import SigningKey
 
 def generate_nats_credentials() -> dict:
     """
@@ -6,7 +7,9 @@ def generate_nats_credentials() -> dict:
     Returns:
         dict: A dictionary containing the seed and public key.
     """
-    keypair = nkeys.KeyPair
+    signing_key = SigningKey.generate().encode()
+    src = nkeys.encode_seed(signing_key, prefix=nkeys.PREFIX_BYTE_USER)
+    keypair = nkeys.from_seed(src)
     return {
         "seed": keypair.seed,
         "private_key": keypair.private_key,
